@@ -36,10 +36,8 @@ class AtomTest
     public function testEscapeSingleQuotationMark()
     {
         $sq = new Atom('term', "jack's");
-        $this->assertEquals(<<<TERM
-(term field=name 'jack\'s')
-TERM
-			,
+        $this->assertEquals(
+			'(term \'jack\\\'s\')',
             strval($sq)
         );
     }
@@ -47,10 +45,17 @@ TERM
     public function testEscapeBackslash()
     {
         $sq = new Atom('term', 'jack\s');
-        $this->assertEquals(<<<TERM
-(term field=name 'jack\\s')
-TERM
-			,
+        $this->assertEquals(
+			'(term \'jack\\\\s\')',
+            strval($sq)
+        );
+    }
+
+    public function testEscapeBoth()
+    {
+        $sq = new Atom('term', 'j\'ack\n');
+        $this->assertEquals(
+			'(term \'j\\\'ack\\\\n\')',
             strval($sq)
         );
     }

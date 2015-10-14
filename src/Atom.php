@@ -31,7 +31,7 @@ class Atom
             "(%s%s '%s')",
             $this->_token,
             $this->getAttributesString(),
-            str_replace("'", "\'", $this->_term)
+            addcslashes($this->_term, '\'\\')
         );
     }
 }
