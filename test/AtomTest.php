@@ -32,4 +32,26 @@ class AtomTest
             strval($sq)
         );
     }
+
+    public function testEscapeSingleQuotationMark()
+    {
+        $sq = new Atom('term', "jack's");
+        $this->assertEquals(<<<TERM
+(term field=name 'jack\'s')
+TERM
+			,
+            strval($sq)
+        );
+    }
+
+    public function testEscapeBackslash()
+    {
+        $sq = new Atom('term', 'jack\s');
+        $this->assertEquals(<<<TERM
+(term field=name 'jack\\s')
+TERM
+			,
+            strval($sq)
+        );
+    }
 }
