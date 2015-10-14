@@ -1,0 +1,18 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+        >
+    <testsuite name="Query">
+        <file>./test/AtomTest.php</file>
+        <file>./test/JoinTest.php</file>
+        <file>./test/RangeTest.php</file>
+        <file>./test/TagsTest.php</file>
+    </testsuite>
+</phpunit>

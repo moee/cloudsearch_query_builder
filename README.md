@@ -1,2 +1,2 @@
-# cloudsearch_query_builder
-Helper to build structured Cloudsearch queries
+# cloudsearch-query-builder
+Helper to build structured CloudSearch queries

@@ -1,0 +1,10 @@
+{
+  "name": "moee/cloudsearchquerybuilder",
+  "description": "Helper to build structured Cloudsearch queries",
+  "keywords": ["php", "cloudsearch"],
+  "autoload": {
+    "psr-4": {
+      "CloudSearchQueryBuilder\\": "src/"
+    }
+  }
+}
